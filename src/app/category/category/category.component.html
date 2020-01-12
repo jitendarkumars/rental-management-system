@@ -1,0 +1,10 @@
+<div class="container">
+    <div class="card-container" *ngFor="let category of categoryArray">
+        <div class="card" (click)="getSubCategory(category)">
+            <img src={{category.image}} alt="{{category.name}}">
+            <div class="card-data">
+                <h4>{{category.name}}</h4>
+            </div>
+        </div>
+    </div>
+</div>

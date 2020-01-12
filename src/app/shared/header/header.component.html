@@ -1,0 +1,23 @@
+<div class="toolbar" role="banner">
+  <div class="title-name" (click)="redirectHome()">
+    <span >Rental Management System</span>
+  </div>
+  <div class="pageNavWrap">
+    <ul class="pageNav second-level-menu">
+      <li class="item">
+        <a class="link"> Select Location</a>
+        <ul class=" second-level-menu">
+          <li class="item" *ngFor="let location of locations;let i=index">
+            <a class="link" (click)="addMenuInList('location',location.name,'')"
+              [routerLink]="['category/location',location.name]">{{location.name}}</a>
+            <ul class="third-level-menu">
+              <li class="item" *ngFor="let branch of location.branches; let j=index">
+                <a class="link" (click)="addMenuInList('branch',location.name,branch.name)">{{branch.name}}</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</div>

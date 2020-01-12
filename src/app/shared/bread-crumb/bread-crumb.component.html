@@ -1,0 +1,8 @@
+<div class="breadCrumbWrap">
+    <div class="breadCrumb">
+        <ng-container *ngFor="let items of breadCrumbItems;let i =index">
+            <span class="link" [class.active]="i==breadCrumbItems.length-1" (click)="goBack(i)">{{items}}</span>
+            <span class="divider" *ngIf="i != breadCrumbItems.length-1"></span>
+        </ng-container>
+    </div>
+</div>

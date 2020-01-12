@@ -1,0 +1,30 @@
+
+.breadCrumbWrap {
+    margin: 20px 20px;
+    padding: 18px 0;
+  }
+  
+  .breadCrumb {
+      font-size: 16px;
+      line-height: 100%;
+      letter-spacing: 0.04em;
+  }
+  
+  .breadCrumb span + span {
+      margin-left: 6px;
+  }
+  
+  .breadCrumb span.link {
+      color: #0e304c;
+      cursor: pointer;
+  }
+  
+  .breadCrumb span.link.active {
+      color: #597388;
+      cursor:default;
+  }
+  
+  .breadCrumb span.divider:after {
+      content: '/';
+      color: #b8b8b8;
+  }
